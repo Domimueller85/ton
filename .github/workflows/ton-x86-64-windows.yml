@@ -2,6 +2,9 @@ name: Windows TON build (portable, x86-64)
 
 on: [push,workflow_dispatch,workflow_call]
 
+permissions:
+  contents: read
+
 defaults:
   run:
     shell: cmd
@@ -17,7 +20,7 @@ jobs:
           systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
 
       - name: Check out current repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: 'recursive'
 

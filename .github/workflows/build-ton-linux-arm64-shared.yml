@@ -2,6 +2,9 @@ name: Ubuntu TON build (shared, arm64)
 
 on: [push,workflow_dispatch,workflow_call]
 
+permissions:
+  contents: read
+
 jobs:
   build:
     strategy:
@@ -12,7 +15,7 @@ jobs:
 
     steps:
     - name: Check out repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:      
         submodules: 'recursive'
 

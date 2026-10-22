@@ -2,13 +2,16 @@ name: MacOS-14 TON build (shared, arm64)
 
 on: [push,workflow_dispatch,workflow_call]
 
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: macos-14
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: 'recursive'
 
