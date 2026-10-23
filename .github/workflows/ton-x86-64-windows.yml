@@ -33,7 +33,7 @@ jobs:
           build-windows-github-2019.bat Enterprise
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@v4
         with:
           name: ton-x86-64-windows
           path: artifacts

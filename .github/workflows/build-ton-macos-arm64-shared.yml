@@ -24,7 +24,7 @@ jobs:
           ./build-macos-shared.sh -t -a
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@v4
         with:
           name: ton-binaries-macos-14
           path: artifacts

@@ -54,7 +54,7 @@ jobs:
         cp ./artifacts/libemulator.so appimages/artifacts/
 
     - name: Upload artifacts
-      uses: actions/upload-artifact@master
+      uses: actions/upload-artifact@v4
       with:
         name: ton-arm64-linux
         path: appimages/artifacts
